@@ -8,13 +8,13 @@
 Summary:	Astro-satpass - Perl classes needed to predict satellite visibility
 Summary(pl.UTF-8):	Astro-satpass - zbiór klas Perla do przewidywania widzialności satelitów
 Name:		perl-Astro-satpass
-Version:	0.070
+Version:	0.071
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e12bc22bf562b272efe72c556c5d399f
+# Source0-md5:	1826011f1f0ca5508c79db27f0fa7e7f
 URL:		http://search.cpan.org/dist/Astro-satpass/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
