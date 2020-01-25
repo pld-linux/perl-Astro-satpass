@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Astro
 %define	pnam	satpass
 Summary:	Astro-satpass - Perl classes needed to predict satellite visibility
