@@ -7,14 +7,14 @@
 Summary:	Astro-satpass - Perl classes needed to predict satellite visibility
 Summary(pl.UTF-8):	Astro-satpass - zbiór klas Perla do przewidywania widzialności satelitów
 Name:		perl-Astro-satpass
-Version:	0.121
+Version:	0.128
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8d33eb7e908ce400385d6e88d1e39e50
-URL:		http://search.cpan.org/dist/Astro-satpass/
+# Source0-md5:	ac4a0a3936d3dd84a8ea7115c38bcae0
+URL:		https://metacpan.org/dist/Astro-satpass
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__sed} -i -e 's|#!/usr/local/bin/perl|#!/usr/bin/perl|' $RPM_BUILD_ROOT/%{_bindir}/satpass
 
 %{__mkdir} -p $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-%{__cp} -a eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+%{__cp} -a eg/* tools/{heavens-above-mag,visual} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} \
 	$RPM_BUILD_ROOT%{perl_vendorarch}/auto/Astro/Coord/ECI/.packlist \
@@ -90,4 +90,20 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Astro/Coord/ECI.pm
 %{perl_vendorlib}/Astro/Coord/ECI
 %{_mandir}/man3/Astro::Coord::ECI*
-%{_examplesdir}/%{name}-%{version}
+%dir %{_examplesdir}/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}/Astro-Coord-ECI.yml
+%{_examplesdir}/%{name}-%{version}/README
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/almanac
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/azimuth
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/closest
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/convert_tle
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/heavens-above-mag
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/iss
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/maidenhead
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/passes
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/positions
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/sh_script
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/solstice
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/usno-seasons
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/xml
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/visual
